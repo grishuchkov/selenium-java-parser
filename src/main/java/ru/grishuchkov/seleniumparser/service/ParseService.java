@@ -4,5 +4,5 @@ import ru.grishuchkov.seleniumparser.dto.Report;
 
 public interface ParseService {
 
-    void parse();
+    Report parse(String siteUrl);
 }

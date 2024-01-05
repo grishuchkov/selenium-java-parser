@@ -1,6 +1,11 @@
 site:
-  url: https://artagym.ru/
+  arta-gym:
+    name: artagym
+    url: https://artagym.ru/
+  alex-fitness:
+    name: alex-fitness
+    url: https://ryazan.alexfitness.ru/timetable
   people-class: online-people_rz
 
 google-client:
-  url: https://script.google.com/macros/s/AKfycbyqj-geFPaoCccpE3VZTFzouim9qVoSHYPm--lIQF_LM9J08IRf3KBQiz8uKtlk20zy/exec
+  url: https://script.google.com/macros/s/AKfycbxeTUlhFWd9Ewza4013stcBvl-hkomCEL03Ojk1WPTWIib1Ef2c08WnDzn7PvUaEtdI/exec
