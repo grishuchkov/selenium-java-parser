@@ -1,4 +1,4 @@
-package ru.grishuchkov.seleniumparser.sheduler;
+package ru.grishuchkov.seleniumparser.scheduler;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +31,7 @@ public class ScheduledParse {
     @Value("${site.alex-fitness.name}")
     private String alexFitnessName;
 
-    @Scheduled(fixedDelay = 5, timeUnit = TimeUnit.MINUTES)
+    @Scheduled(fixedDelay = 1, timeUnit = TimeUnit.MINUTES)
     private void parse(){
         parseArtaGym();
         parseAlexFitness();
