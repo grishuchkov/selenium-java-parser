@@ -1,11 +1,17 @@
 site:
   arta-gym:
-    name: artagym
-    url: https://artagym.ru/
+    name: ${ARTA_NAME}
+    url: ${ARTA_URL}
   alex-fitness:
-    name: alex-fitness
-    url: https://ryazan.alexfitness.ru/timetable
+    name: ${ALEX_NAME}
+    url: ${ALEX_URL}
   people-class: online-people_rz
 
 google-client:
-  url: https://script.google.com/macros/s/AKfycbxeTUlhFWd9Ewza4013stcBvl-hkomCEL03Ojk1WPTWIib1Ef2c08WnDzn7PvUaEtdI/exec
+  url: ${GOOGLE_SHEET_URL}
+
+selenium:
+  chrome-url: ${SELENIUM_URL}
+
+server:
+  port: 8100

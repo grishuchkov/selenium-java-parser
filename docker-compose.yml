@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  java-selenium-parser:
+    container_name: java-selenium-parser
+    image: grishuchkov/java-selenium-parser:latest
+    ports:
+      - "8100:8100"
+    env_file:
+      - .env
+    restart: always
