@@ -17,7 +17,6 @@ import java.net.URL;
 @Slf4j
 @PropertySource("classpath:application.yaml")
 public class AppConfig {
-    protected static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
 
     @Value("${selenium.chrome-url}")
     String remoteChromeUrl;
@@ -27,9 +26,7 @@ public class AppConfig {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
 
-        driver.set(new RemoteWebDriver(new URL(remoteChromeUrl), options));
-
-        return driver.get();
+        return new RemoteWebDriver(new URL(remoteChromeUrl), options);
     }
 
     @Bean
