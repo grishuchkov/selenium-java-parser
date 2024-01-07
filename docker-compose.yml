@@ -1,11 +1,32 @@
 version: '3'
-
 services:
   java-selenium-parser:
     container_name: java-selenium-parser
     image: grishuchkov/java-selenium-parser:latest
+    networks:
+      - docker-custom-network
     ports:
       - "8100:8100"
-    env_file:
-      - .env
+    environment:
+      - ALEX_NAME=${ALEX_NAME}
+      - ALEX_URL=${ALEX_URL}
+      - ARTA_NAME=${ARTA_NAME}
+      - ARTA_URL=${ARTA_URL}
+      - GOOGLE_SHEET_URL=${GOOGLE_SHEET_URL}
+      - SELENIUM_URL=${SELENIUM_URL}
     restart: always
+    depends_on:
+      - selenium
+
+  selenium:
+    image: selenium/standalone-chrome:latest
+    networks:
+      - docker-custom-network
+    ports:
+      - 4444:4444
+    environment:
+      - SE_NODE_SESSION_TIMEOUT=1000
+
+networks:
+  docker-custom-network:
+    external: true
